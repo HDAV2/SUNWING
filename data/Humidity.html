@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Humidity Measurement And Habitability</title>
+  <link rel="stylesheet" type="text/css" href="styles_temp.css">
+  <style>
+    @keyframes scaleAnimation {
+    0% {
+    transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+    transform: translate(-50%, -50%) scale(1.05);
+    }
+    100% {
+    transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.btn{
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: 0.4s;
+    background-color: rgb(88, 82, 255);
+}
+
+.circle3::before{
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.circle3:hover::before{
+    height: 180%;
+}
+
+.circle3 {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(8, 0, 255);
+    animation: scaleAnimation 3.5s ease-in-out infinite alternate;
+    opacity: 0.7;
+    transition: opacity 1s ease;
+}
+
+
+.circle-text {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 2vw; /* Adjust the value as needed */
+}
+  </style>
+  <link rel="stylesheet" type="text/css" href="background.css">
+</head>
+<body>
+
+    <a href="index.html">
+      <button class="btn circle3">
+        <h2 class="circle-text">
+            <div id="humidity">Humidity: <span id="humidity-value">Loading...</span></div>
+        </h2>
+      </button>
+      </a>
+
+    <nav>
+        <div class="logo">
+          <a href="#">Coding Crew </a>
+        </div>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      
+  <header>
+    <h1>Humidity Measurement and Habitability</h1>
+  </header>
+  
+  <main>
+    <section>
+      <h2>Introduction</h2>
+      <p>Humidity, the amount of moisture present in the air, profoundly influences our comfort, health, and the overall suitability of an environment for human habitation. By understanding the significance of humidity measurement, we can gain insights into indoor air quality, mold growth, and the effectiveness of climate control systems. Join us as we delve into the importance of humidity measurement and its impact on creating comfortable and livable spaces.</p>
+    </section>
+    
+    <section>
+      <h2>Why Measuring Temperature is Important</h2>
+      <p>1. Human Comfort: Humidity levels greatly impact human comfort and well-being. High humidity can make the air feel sticky and uncomfortable, while low humidity can lead to dry skin and respiratory irritation. Measuring humidity helps assess the moisture content in the air, allowing us to create a comfortable and livable environment by adjusting ventilation, humidity control systems, and indoor moisture levels. <br><br>
+
+        2. Health and Indoor Air Quality: Humidity plays a crucial role in maintaining indoor air quality. Excessive moisture can promote mold growth and the proliferation of allergens, contributing to respiratory issues and allergies. On the other hand, low humidity levels can lead to dryness of the respiratory tract and increase susceptibility to infections. Measuring humidity helps identify and manage these potential health hazards, ensuring a healthy and habitable indoor environment. <br><br>
+        
+        3. Building Maintenance: Humidity measurement is essential for building maintenance and preservation. Excessive humidity can lead to structural damage, such as warping of wood, corrosion of metal, or degradation of sensitive materials. Measuring humidity helps monitor moisture levels, allowing for timely interventions like ventilation adjustments or dehumidification systems to prevent costly repairs and maintain the integrity of buildings. <br><br>
+        
+        4. Energy Efficiency: Humidity affects the perceived temperature and can influence the efficiency of heating and cooling systems. By measuring humidity, we can optimize HVAC operations, ensuring that energy is utilized efficiently while maintaining comfortable indoor conditions. Balancing humidity levels can reduce the load on cooling or heating equipment and contribute to energy conservation and cost savings.</p>
+    </section>
+    
+    <!-- Additional sections and content can be added as needed -->
+  </main>
+  
+  <div class="splitcolor"></div>
+  <footer>
+    <p1>Sunwing &copy; 2023. All rights reserved.</p1>
+  </footer>
+
+  <div id="background">
+    <div class="circle"></div>
+    <div class="circle1"></div>
+    <!-- Add more circles here -->
+  </div>
+
+  <script src="script.js"></script>
+  <script src="background.js"></script>
+</body>
+</html>

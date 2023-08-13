@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CO Content Measurement And Habitability</title>
+  <link rel="stylesheet" type="text/css" href="styles_temp.css">
+  <style>
+    @keyframes scaleAnimation {
+    0% {
+    transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+    transform: translate(-50%, -50%) scale(1.05);
+    }
+    100% {
+    transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.btn{
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: 0.4s;
+    background-color: rgb(103, 255, 108);
+}
+
+.circle4::before{
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.circle4:hover::before{
+    height: 180%;
+}
+
+.circle4 {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(0, 255, 8);
+    animation: scaleAnimation 3.5s ease-in-out infinite alternate;
+    opacity: 0.7;
+    transition: opacity 1s ease;
+}
+
+
+.circle-text {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 2vw; /* Adjust the value as needed */
+}
+  </style>
+  <link rel="stylesheet" type="text/css" href="background.css">
+</head>
+<body>
+
+  <a href="index.html">
+    <button class="btn circle4">
+      <h2 class="circle-text">
+          <div id="co">CO Value: <span id="co-value">Loading...</span></div>
+      </h2>
+    </button>
+  </a>
+
+    <nav>
+        <div class="logo">
+          <a href="#">Coding Crew </a>
+        </div>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      
+  <header>
+    <h1>CO Content Measurement and Habitability</h1>
+  </header>
+  
+  <main>
+    <section>
+      <h2>Introduction</h2>
+      <p>CO, a colorless and odorless gas, poses significant risks to human health and safety. By understanding the importance of CO measurement, we can detect potential sources of CO emissions, prevent exposure to toxic levels, and ensure the proper functioning of ventilation and combustion systems. Join us as we explore the significance of CO content measurement and its impact on creating healthier and safer living environments.</p>
+    </section>
+    
+    <section>
+      <h2>Why Measuring Temperature is Important</h2>
+      <p>Health and Safety: Measuring carbon monoxide (CO) content is crucial for ensuring health and safety in indoor environments. CO is a toxic gas emitted by incomplete combustion of fuels, such as gas appliances or car engines. Monitoring CO levels helps detect potential leaks, malfunctioning appliances, or inadequate ventilation, preventing the buildup of this silent and potentially lethal gas. Accurate CO measurement is vital for maintaining habitable spaces free from this harmful pollutant.</p>
+    </section>
+    
+    <!-- Additional sections and content can be added as needed -->
+  </main>
+  
+  <div class="splitcolor"></div>
+  <footer>
+    <p1>Sunwing &copy; 2023. All rights reserved.</p1>
+  </footer>
+
+  <div id="background">
+    <div class="circle"></div>
+    <div class="circle1"></div>
+    <!-- Add more circles here -->
+  </div>
+
+  <script src="script.js"></script>
+  <script src="background.js"></script>
+</body>
+</html>

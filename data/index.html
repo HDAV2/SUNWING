@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sunwing - Coding Crew</title>
+    <!-- circles -->
+    <style>
+      @keyframes scaleAnimation {
+    0% {
+    transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+    transform: translate(-50%, -50%) scale(1.05);
+    }
+    100% {
+    transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.btn{
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    
+    background-color: rgb(78, 78, 224);
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: 0.4s;
+    background-color: rgb(100, 100, 244);
+}
+
+.circle1::before{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+
+.circle1:hover::before{
+    height: 180%;
+}
+.circle2::before{
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.circle2:hover::before{
+    height: 180%;
+}
+.circle3::before{
+  bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+
+.circle3:hover::before{
+    height: 180%;
+}
+.circle4::before{
+  bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+
+.circle4:hover::before{
+    height: 180%;
+}
+
+.circle1 {
+    width: 14vw;
+    height: 14vw;
+    z-index: 9997;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 32%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    animation: scaleAnimation 3.5s ease-in-out infinite alternate;
+    opacity: 0.7;
+    transition: opacity 1s ease, transform 0.3s ease;
+}
+
+.circle2 {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 37%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    animation: scaleAnimation 3.5s ease-in-out infinite alternate;
+    opacity: 0.7;
+    transition: opacity 1s ease;
+}
+
+.circle3 {
+    width: 22vw;
+    height: 22vw;
+    z-index: 9998;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 56%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    animation: scaleAnimation 4s ease-in-out infinite alternate;
+    opacity: 0.7;
+    transition: opacity 1s ease, transform 0.3s ease;
+}
+
+.circle4 {
+    width: 18vw;
+    height: 18vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 63%;
+    left: 74%;
+    transform: translate(-50%, -50%);
+    animation: scaleAnimation 3.25s ease-in-out infinite alternate;
+    opacity: 0.7;
+    transition: opacity 1s;
+}
+
+
+.circle-text {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 2vw; /* Adjust the value as needed */
+}
+    </style>
+
+    <!-- content -->
+    <style>
+      body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Add your desired background color */
+  }
+  
+  nav {
+    background-color: #00023e;
+    color: #fff;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo a {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .logo img {
+    width: 55px; /* Adjust the desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add some spacing between the image and the text */
+  }
+  
+
+  .menu {
+    list-style-type: none;
+    margin-right: 10px;
+    padding: 0;
+    font-size: 1.1rem;
+  }
+  
+  .menu li {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  
+  .menu li a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+  }
+  
+  .menu li a:hover::after {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 7vw;
+    margin-bottom: 10px;
+    position: absolute;
+    left: 10%;
+    top: 20%;
+  }
+
+  p {
+    font-size: 1.5vw;
+    text-align: left;
+    width: 30vw;
+    position: absolute;
+    left: 10%;
+    top: 42%;
+  }
+  p1 {
+  font-size: 1.2vw;
+  color: white;
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  bottom: 2.5%;
+  transform: translateX(-50%);
+}
+    </style>
+
+    <!-- background -->
+    <style>
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  #background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+  
+  .circlebg {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.2;
+    animation: move 60s infinite linear;
+  }
+  .circlebg1 {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.08;
+    animation: move1 60s infinite linear;
+  }
+  
+  /* Define different circle sizes and colors */
+  /* .circle:nth-child(1) {
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #FF0000;
+  } */
+  
+  /* Add more circle styles here */
+  
+  @keyframes move {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(200px, 50px) scale(1.5);
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+  }
+  @keyframes move1 {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    50% {
+      transform: translate(-100px, 10px) scale(1.3);
+    }
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+  }
+    </style>
+
+<!-- Splitcolor -->
+    <style>
+    .splitcolor {
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 93%,
+        #00023e 93%,
+        #00023e 100%
+      );
+      position: absolute;
+    }
+    </style>
+<!-- 1300 -->
+    <style>
+      /* Responsive Code here */
+      @media screen and (max-width: 1300px){
+
+        body{
+          overflow: hidden;
+        }
+        .circle1 {
+    width: 200px;
+    height: 200px;
+    z-index: 9997;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 35%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    animation: scaleAnimation 3.5s ease-in-out infinite alternate;
+    opacity: 0.7;
+    transition: opacity 1s ease, transform 0.3s ease;
+}
+
+.circle2 {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 37%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    animation: scaleAnimation 3.5s ease-in-out infinite alternate;
+    opacity: 0.7;
+    transition: opacity 1s ease;
+}
+
+.circle3 {
+    width: 230px;
+    height: 230px;
+    z-index: 9998;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 62%;
+    transform: translate(-50%, -50%);
+    animation: scaleAnimation 4s ease-in-out infinite alternate;
+    opacity: 0.7;
+    transition: opacity 1s ease, transform 0.3s ease;
+}
+
+.circle4 {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55%;
+    left: 74%;
+    transform: translate(-50%, -50%);
+    animation: scaleAnimation 3.25s ease-in-out infinite alternate;
+    opacity: 0.7;
+    transition: opacity 1s;
+}
+
+
+.circle-text {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 2vw; /* Adjust the value as needed */
+}
+
+h1 {
+    font-size: 100px;
+    margin-bottom: 10px;
+    position: absolute;
+    left: 10%;
+    top: 20%;
+  }
+
+  p {
+    font-size: 20px;
+    text-align: left;
+    width: 30vw;
+    position: absolute;
+    left: 10%;
+    top: 35%;
+  }
+      }
+    </style>
+<!-- 1000 -->
+<style>
+  /* Responsive Code here */
+  @media screen and (max-width: 1000px){
+
+
+  body{
+    overflow: hidden;
+  }
+    .circle1 {
+width: 200px;
+height: 200px;
+z-index: 9997;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+top: 40%;
+left: 38%;
+transform: translate(-50%, -50%);
+animation: scaleAnimation 3.5s ease-in-out infinite alternate;
+opacity: 0.7;
+transition: opacity 1s ease, transform 0.3s ease;
+}
+
+.circle2 {
+width: 250px;
+height: 250px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+top: 41%;
+left: 58%;
+transform: translate(-50%, -50%);
+animation: scaleAnimation 3.5s ease-in-out infinite alternate;
+opacity: 0.7;
+transition: opacity 1s ease;
+}
+
+.circle3 {
+width: 230px;
+height: 230px;
+z-index: 9998;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+top: 57%;
+left: 41%;
+transform: translate(-50%, -50%);
+animation: scaleAnimation 4s ease-in-out infinite alternate;
+opacity: 0.7;
+transition: opacity 1s ease, transform 0.3s ease;
+}
+
+.circle4 {
+width: 170px;
+height: 170px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+top: 58%;
+left: 61%;
+transform: translate(-50%, -50%);
+animation: scaleAnimation 3.25s ease-in-out infinite alternate;
+opacity: 0.7;
+transition: opacity 1s;
+}
+
+
+.circle-text {
+text-align: center;
+color: rgb(255, 255, 255);
+font-size: 2vw; /* Adjust the value as needed */
+}
+
+h1 {
+font-size: 100px;
+margin-bottom: 10px;
+position: absolute;
+left: 25%;
+top: 10%;
+}
+
+p {
+font-size: 20px;
+text-align: left;
+width: 70vw;
+position: absolute;
+left: 20%;
+top: 75%;
+}
+  }
+</style>
+<!-- 600 -->
+<!-- <style>
+  /* Responsive Code here */
+  @media screen and (max-width: 600px){
+    .circle1 {
+width: 200px;
+height: 200px;
+z-index: 9997;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+top: 40%;
+left: 38%;
+transform: translate(-50%, -50%);
+animation: scaleAnimation 3.5s ease-in-out infinite alternate;
+opacity: 0.7;
+transition: opacity 1s ease, transform 0.3s ease;
+}
+
+.circle2 {
+width: 250px;
+height: 250px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+top: 41%;
+left: 58%;
+transform: translate(-50%, -50%);
+animation: scaleAnimation 3.5s ease-in-out infinite alternate;
+opacity: 0.7;
+transition: opacity 1s ease;
+}
+
+.circle3 {
+width: 230px;
+height: 230px;
+z-index: 9998;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+top: 57%;
+left: 41%;
+transform: translate(-50%, -50%);
+animation: scaleAnimation 4s ease-in-out infinite alternate;
+opacity: 0.7;
+transition: opacity 1s ease, transform 0.3s ease;
+}
+
+.circle4 {
+width: 170px;
+height: 170px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+top: 58%;
+left: 61%;
+transform: translate(-50%, -50%);
+animation: scaleAnimation 3.25s ease-in-out infinite alternate;
+opacity: 0.7;
+transition: opacity 1s;
+}
+
+
+.circle-text {
+text-align: center;
+color: rgb(255, 255, 255);
+font-size: 2vw; /* Adjust the value as needed */
+}
+
+h1 {
+font-size: 100px;
+margin-bottom: 10px;
+position: absolute;
+left: 25%;
+top: 10%;
+}
+
+p {
+font-size: 20px;
+text-align: center;
+width: 50vw;
+position: absolute;
+left: 25%;
+top: 75%;
+}
+
+  }
+</style> -->
+
+
+<!-- 400 -->
+<style>
+     @media screen and (max-width: 600px) {
+      html, body {
+        overflow: hidden;
+      }
+
+      .splitcolor {
+        width: 100vw;
+        height: 100%;
+        z-index: -1;
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0) 93%,
+          #00023e 93%,
+          #00023e 100%
+        );
+        position: absolute;
+      }
+
+      nav {
+    background-color: #00023e;
+    color: #fff;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+      body {
+        overflow: hidden;
+      }
+
+      .circle1 {
+        width: 150px;
+        height: 150px;
+        z-index: 9997;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        animation: scaleAnimation 3.5s ease-in-out infinite alternate;
+        opacity: 0.7;
+        transition: opacity 1s ease, transform 0.3s ease;
+      }
+
+      .circle2 {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 41%;
+        left: 58%;
+        transform: translate(-50%, -50%);
+        animation: scaleAnimation 3.5s ease-in-out infinite alternate;
+        opacity: 0.7;
+        transition: opacity 1s ease;
+      }
+
+      .circle3 {
+        width: 160px;
+        height: 160px;
+        z-index: 9998;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 57%;
+        left: 39%;
+        transform: translate(-50%, -50%);
+        animation: scaleAnimation 4s ease-in-out infinite alternate;
+        opacity: 0.7;
+        transition: opacity 1s ease, transform 0.3s ease;
+      }
+
+      .circle4 {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 58%;
+        left: 63%;
+        transform: translate(-50%, -50%);
+        animation: scaleAnimation 3.25s ease-in-out infinite alternate;
+        opacity: 0.7;
+        transition: opacity 1s;
+      }
+
+      .circle-text {
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-size: 2vw; /* Adjust the value as needed */
+      }
+
+      h1 {
+        font-size: 15vw;
+        margin-bottom: 10px;
+        position: absolute;
+        left: 25%;
+        top: 10%;
+      }
+
+      p {
+        color: #ffffff00;
+        font-size: 20px;
+        text-align: center;
+        width: 50vw;
+        position: absolute;
+        left: 25%;
+        top: 75%;
+      }
+    }
+</style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+
+
+  <div class="splitcolor"></div>
+    
+      <div class="dataReadings">
+        <a href="PM25.html" target="_blank">
+          <button class="btn circle1">
+            <h2 class="circle-text">
+              <div id="pm25">PM2.5: <span id="pm25-value">Loading...</span></div>
+            </h2>
+          </button>
+        </a>        
+        
+        <a href="Temperature.html" target="_blank">
+          <button class="btn circle2">
+            <h2 class="circle-text">
+                <div id="temperature">Temperature: <span id="temperature-value">Loading...</span></div>
+            </h2>
+          </button>
+        </a>
+        
+        <a href="Humidity.html" target="_blank">
+          <button class="btn circle3">
+            <h2 class="circle-text">
+                <div id="humidity">Humidity: <span id="humidity-value">Loading...</span></div>
+            </h2>
+          </button>
+        </a>
+        
+        <a href="CO.html" target="_blank">
+          <button class="btn circle4">
+            <h2 class="circle-text">
+                <div id="co">CO Value: <span id="co-value">Loading...</span></div>
+            </h2>
+          </button>
+        </a>
+      </div>
+
+      <nav>
+        <div class="logo">
+          <a href="#">Coding Crew </a>
+        </div>
+        <ul class="menu">
+          <li><a href="index.html" target="_blank">Home</a></li>
+          <li><a href="about.html" target="_blank">About</a></li>
+          <li><a href="services.html" target="_blank">Services</a></li>
+          <li><a href="contact.html" target="_blank">Contact</a></li>
+        </ul>
+      </nav>
+
+    <h1>Sunwing</h1>
+    <p>The Sunwing air quality sensor is a versatile device that measures temperature, humidity, CO (carbon monoxide) content, and particulate matter. It provides valuable insights into air quality, making it suitable for indoor monitoring, smart homes, and industrial settings.</p>
+    
+    <footer>
+      <p1>Sunwing &copy; 2023. All rights reserved.</p1>
+    </footer>
+
+  <div id="background">
+    <div class="circle"></div>
+    <div class="circle1"></div>
+    <!-- Add more circles here -->
+  </div>
+
+    <script src="script.js"></script>
+
+    <!-- background code -->
+    <script>
+      function randomizeCircles() {
+    var numCircles = 25;
+  
+    // Create circles dynamically
+    for (var i = 0; i < numCircles; i++) {
+      var circle = document.createElement("div");
+      circle.className = "circlebg";
+      setRandomProperties(circle);
+      document.getElementById("background").appendChild(circle);
+    }
+  }
+    function randomizeCircles1() {
+    var numCircles = 25;
+  
+    // Create circles dynamically
+    for (var i = 0; i < numCircles; i++) {
+      var circle = document.createElement("div");
+      circle.className = "circlebg1";
+      setRandomProperties(circle);
+      document.getElementById("background").appendChild(circle);
+    }
+  }
+  
+  function setRandomProperties(circle) {
+    // Generate random values for top, left, width, and background-color
+    var topValue = Math.floor(Math.random() * 100) + "%";
+    var leftValue = Math.floor(Math.random() * 100) + "%";
+    var widthValue = Math.floor(Math.random() * 150) + 10 + "px";
+    var colorValue = getRandomColor();
+  
+    // Apply random values to the circle element
+    circle.style.top = topValue;
+    circle.style.left = leftValue;
+    circle.style.width = widthValue;
+    circle.style.height = widthValue;
+    circle.style.backgroundColor = colorValue;
+  }
+  
+  function getRandomColor() {
+  var shadesOfBlue = ["#0000FF", "#0055FF", "#0099FF", "#00CCFF", "#00FFFF"];
+  var randomIndex = Math.floor(Math.random() * shadesOfBlue.length);
+  return shadesOfBlue[randomIndex];
+}
+  
+  // Call the function to generate random circles
+  randomizeCircles();
+  randomizeCircles1();
+    </script>
+
+    <!-- pms5 value generator -->
+    <script>
+// Random value generator function
+function getRandomValue(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Update PM2.5 value with a random value between 10 and 20
+function updatePM25Value() {
+  var pm25ValueElement = document.getElementById('pm25-value');
+  var randomValue = getRandomValue(10, 20);
+  pm25ValueElement.textContent = randomValue + ' ug/m3';
+}
+
+// Initial update
+updatePM25Value();
+
+// Update PM2.5 value every 10 seconds
+setInterval(updatePM25Value, 10000);
+
+    </script>
+</body>
+</html>

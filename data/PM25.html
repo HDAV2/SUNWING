@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Particulate Matter Measurement And Habitability</title>
+  <link rel="stylesheet" type="text/css" href="styles_temp.css">
+  <style>
+    @keyframes scaleAnimation {
+    0% {
+    transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+    transform: translate(-50%, -50%) scale(1.05);
+    }
+    100% {
+    transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.btn{
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: 0.4s;
+    background-color: rgb(255, 221, 49);
+}
+
+.circle1::before{
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.circle1:hover::before{
+    height: 180%;
+}
+
+.circle1 {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(238, 198, 0);
+    animation: scaleAnimation 3.5s ease-in-out infinite alternate;
+    opacity: 0.7;
+    transition: opacity 1s ease;
+}
+
+
+.circle-text {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 2vw; /* Adjust the value as needed */
+}
+  </style>
+  <link rel="stylesheet" type="text/css" href="background.css">
+</head>
+<body>
+
+    <a href="index.html">
+      <button class="btn circle1">
+        <h2 class="circle-text">
+          <div id="pm25">PM2.5: <span id="pm25-value">Loading...</span></div>
+        </h2>
+      </button>
+      </a>
+
+    <nav>
+        <div class="logo">
+          <a href="#">Coding Crew </a>
+        </div>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      
+  <header>
+    <h1>Particulate Matter Measurement and Habitability</h1>
+  </header>
+  
+  <main>
+    <section>
+      <h2>Introduction</h2>
+      <p>Particulate matter, consisting of tiny particles suspended in the air, can have detrimental effects on human health and the environment. By understanding the significance of particulate matter measurement, we can evaluate air quality, identify sources of pollution, and implement effective mitigation strategies. Join us as we delve into the role of particulate matter measurement and its impact on creating cleaner and more sustainable living spaces.</p>
+    </section>
+    
+    <section>
+      <h2>Why Measuring Temperature is Important</h2>
+      <p>Air Pollution and Environmental Impact: Measuring particulate matter (PM) concentration is essential for assessing air pollution levels and their impact on habitability. PM consists of microscopic particles suspended in the air, which can have adverse health effects when inhaled. Measuring PM helps monitor air quality, identify pollution sources, and implement measures to reduce emissions. It plays a crucial role in preserving the environment, mitigating climate change, and creating healthier living environments for both humans and ecosystems.</p>
+    </section>
+    
+    <!-- Additional sections and content can be added as needed -->
+  </main>
+  
+  <div class="splitcolor"></div>
+  <footer>
+    <p1>Sunwing &copy; 2023. All rights reserved.</p1>
+  </footer>
+
+  <div id="background">
+    <div class="circle"></div>
+    <div class="circle1"></div>
+    <!-- Add more circles here -->
+  </div>
+
+  <script src="script.js"></script>
+  <script src="background.js"></script>
+
+  <script>
+    // Random value generator function
+    function getRandomValue(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    
+    // Update PM2.5 value with a random value between 10 and 20
+    function updatePM25Value() {
+      var pm25ValueElement = document.getElementById('pm25-value');
+      var randomValue = getRandomValue(10, 20);
+      pm25ValueElement.textContent = randomValue + ' ug/m3';
+    }
+    
+    // Initial update
+    updatePM25Value();
+    
+    // Update PM2.5 value every 10 seconds
+    setInterval(updatePM25Value, 10000);
+    
+        </script>
+</body>
+</html>

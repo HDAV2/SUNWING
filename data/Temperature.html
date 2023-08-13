@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Temperature Measurement And Habitability</title>
+  <link rel="stylesheet" type="text/css" href="styles_temp.css">
+  <link rel="stylesheet" type="text/css" href="background.css">
+  <style>
+    @keyframes scaleAnimation {
+    0% {
+    transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+    transform: translate(-50%, -50%) scale(1.05);
+    }
+    100% {
+    transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.btn{
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: 0.4s;
+    background-color: rgb(255, 72, 72);
+}
+
+.circle2::before{
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.circle2:hover::before{
+    height: 180%;
+}
+
+.circle2 {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 0, 0);
+    animation: scaleAnimation 3.5s ease-in-out infinite alternate;
+    opacity: 0.7;
+    transition: opacity 1s ease;
+}
+
+
+.circle-text {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 2vw; /* Adjust the value as needed */
+}
+  </style>
+</head>
+<body>
+
+    <a href="index.html">
+        <button class="btn circle2">
+          <h2 class="circle-text">
+              <div id="temperature">Temperature: <span id="temperature-value">Loading...</span></div>
+          </h2>
+        </button>
+      </a>
+
+    <nav>
+        <div class="logo">
+          <a href="#">Coding Crew </a>
+        </div>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      
+  <header>
+    <h1>Temperature Measurement and Habitability</h1>
+  </header>
+  
+  <main>
+    <section>
+      <h2>Introduction</h2>
+      <p>Temperature directly affects human comfort, survival of ecosystems, agricultural practices, and climate change studies. By understanding temperature, we gain insights into the suitability of environments for habitation and can create comfortable and sustainable living conditions. Join us as we delve into the significance of temperature measurement and its impact on creating livable spaces.</p>
+    </section>
+    
+    <section>
+      <h2>Why Measuring Temperature is Important</h2>
+      <p>1. Human Comfort: Temperature greatly affects human comfort and well-being. Extreme temperatures, whether too hot or too cold, can pose risks to human health and make living conditions inhospitable. Measuring temperature helps determine if the environment provides a comfortable and livable space for individuals. <br><br>
+
+        2. Thermoregulation: Humans have a limited range of temperatures at which they can maintain optimal physiological function. Measuring temperature helps understand the thermal conditions of an environment, allowing us to adapt and regulate our body temperature through appropriate clothing, shelter, or heating/cooling systems. <br><br>
+        
+        3. Survival and Adaptation: The ability of humans and other organisms to survive and adapt to different environments is closely tied to temperature. Measuring temperature helps identify suitable habitats and determine the necessary adaptations, such as insulation, temperature control, or behavioral adjustments, to ensure survival and well-being. <br><br>
+        
+        4. Agriculture and Food Production: Temperature is a critical factor in agricultural practices and food production. Measuring temperature helps determine the suitability of an area for cultivating crops, selecting appropriate plant varieties, and managing livestock. It also influences the growth rates, yields, and quality of agricultural products. <br><br>
+        
+        5. Ecosystems and Biodiversity: Temperature plays a vital role in shaping ecosystems and supporting biodiversity. It influences the distribution of plant and animal species, affects ecological processes, and determines the availability of resources. Measuring temperature helps monitor and understand the impacts of temperature changes on ecosystems and the potential consequences for biodiversity. <br><br>
+        
+        6. Climate Change: Measuring temperature is essential for studying and monitoring climate change. It enables scientists to track long-term temperature trends, assess the impacts of global warming, and develop models to predict future climate scenarios. Understanding temperature variations is crucial for formulating mitigation and adaptation strategies to minimize the negative effects of climate change on habitability.</p>
+    </section>
+    
+    <!-- Additional sections and content can be added as needed -->
+  </main>
+  
+  <div class="splitcolor"></div>
+  <footer>
+    <p1>Sunwing &copy; 2023. All rights reserved.</p1>
+  </footer>
+
+  <div id="background">
+    <div class="circle"></div>
+    <div class="circle1"></div>
+    <!-- Add more circles here -->
+  </div>
+
+  <script src="script.js"></script>
+  <script src="background.js"></script>
+</body>
+</html>
